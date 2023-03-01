@@ -50,60 +50,55 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   int _counter = 1;
   String _text = "Ganjil";
-  int _nilai  = 3;
+  // int _nilai  = 3;
 
   void _incrementCounter() {
     setState(() {
-      // This call to setState tells the Flutter framework that something has
-      // changed in this State, which causes it to rerun the build method below
-      // so that the display can reflect the updated values. If we changed
-      // _counter without calling setState(), then the build method would not be
-      // called again, and so nothing would appear to happen.
       _counter++;
-      if (_counter>10){
+      if (_counter>20){
         _counter = 1;
       }
-      if (_counter%2 ==0) {
-        _text = "Genap";
-      }else{
-          _text = "Ganjil";
-      }
-      if (_counter%2 ==0) {
-        _text = "Genap";
-      }else{
-          _text = "Ganjil";
-      }
-
-      _text = "Genap: ";
-      for(int i=0; i<=_counter; i++){
-      if(i==0) {
-      _text +='';
-      } else if (i ==1) {
-        _text += '${i}, ';
-      }else {
-          if (i % 3 == 0){
-            if(i % 2 == 0) {
-              _text += '${i},';
-      }
-      }
-      }
-      }
-      
-      _text = "Prima: ";
-      for(int i=1; i<=_counter/2; i++){
-        int bil=0;
-        for (var n=1; n<=i; n++){
-          if(i % n == 0) {
-            bil = bil + 1;
-          }
-        }
-        if (bil == 2){
-          _text += '${i}, ';
-        }
-      }
-
     });
+
+    if (_counter%2 ==0) {
+      _text = "Genap";
+    }else{
+      _text = "Ganjil";
+    }
+
+    // _text = "Genap: "; //percobaan 3+tugas 1
+    // for(int i=0; i<=_counter; i++) {
+    //   if (i == 0) {
+    //     _text += '';
+    //   } else if (i == 0) {
+    //     _text += '${i}, ';
+    //   } else {
+    //     if (i % 3 == 0) {
+    //       if (i % 2 == 0) {
+    //         _text += '${i},';
+    //       }
+    //     }
+    //   }
+    //
+    //   // _text = "Prima: ";
+    //   // for (int i = 1; i <= _counter / 2; i++) {
+    //   //   int bil = 0;
+    //   //   for (var n = 1; n <= i; n++) {
+    //   //     if (i % n == 0) {
+    //   //       bil = bil + 1;
+    //   //     }
+    //   //   }
+    //   //   if (bil == 2) {
+    //   //     _text += '${i}, ';
+    //   //   }
+    //   // }
+    //
+    //
+    // }
   }
+
+
+
   @override
   Widget build(BuildContext context) {
     // This method is rerun every time setState is called, for instance as done
